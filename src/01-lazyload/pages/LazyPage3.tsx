@@ -1,6 +1,6 @@
 
 
-export const LazyPage3 = () => {
+const LazyPage3 = () => {
 
 
     return (
@@ -8,3 +8,5 @@ export const LazyPage3 = () => {
     )
 
 }
+
+export default LazyPage3;
