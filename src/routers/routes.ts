@@ -4,6 +4,8 @@ import { lazy, LazyExoticComponent } from 'react';
 // Components:
 import { NoLazy } from '../01-lazyload/pages/NoLazy';
 
+// Implementación de Lazy Load o carga Perezosa de componentes o modulos:
+const LazyLayout = lazy(()=> import(/* webpackChunkName: "LazyLayout"*/ '../01-lazyload/layout/LazyLayout'));
 
 
 type JSXComponent = ()=>JSX.Element;
@@ -14,10 +16,6 @@ interface RoutesProps {
     Component: LazyExoticComponent<JSXComponent> | JSXComponent;
     name: string;
 }
-
-
-// Implementación de Lazy Load o carga Perezosa de componentes o modulos:
-const LazyLayout = lazy(()=> import(/* webpackChunkName: "LazyLayout"*/ '../01-lazyload/layout/LazyLayout'));
 
 
 export const routes: RoutesProps[] = [
